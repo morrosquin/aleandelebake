@@ -1,0 +1,40 @@
+html {
+	margin: auto;
+    padding: 10px;
+	}
+
+h1 {
+    color: pink;
+}
+h2 {
+    color: rgb(184, 129, 184);
+}
+section {
+    color: lightslategray;
+
+}
+body{
+    background-color: rgb(248, 229, 232);
+    font: 85% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	margin: 0; 
+	padding: 10px;
+}
+
+
+.newfont{
+    font-family: 'Dancing Script', cursive;
+}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+
+#pie { 
+	text-align: center; 
+	}
+
+
+    
+  
