@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+
+<p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p> <!--if cheeses exist, but hte list is
+ empty display the message "no cheese"-->
+<a href = "/cheese/add">Add Cheese</a>
+<!--adds a link to the add cheese page to return to the add cheese page and add more cheeses-->
+<ul>
+    <li th:each="cheese : ${cheeses}" th:text="${cheese}"></li>
+<!--    -the ${} looks for value "cheeses in the model
+    iterates over EACH item in the array list and passes the the TEXT of each of those items-->
+</ul>
+</body>
+</html>
