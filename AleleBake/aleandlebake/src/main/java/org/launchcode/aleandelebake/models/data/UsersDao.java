@@ -1,6 +1,6 @@
-package org.launchcode.aleandlebake.models.data;
+package org.launchcode.aleandelebake.models.data;
 
-import org.launchcode.aleandlebake.models.Users;
+import org.launchcode.aleandelebake.models.Users;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
