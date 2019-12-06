@@ -1,17 +1,13 @@
 package org.launchcode.aleandelebake.models;
 
-//import org.springframework.data.annotation.Id;
-import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
-public class Users {
+public class Home {
     @Id
     @GeneratedValue
     private int id;
 
-    public Users() {
-//        this.id = id;
-    }
 }
