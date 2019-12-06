@@ -19,6 +19,7 @@ public class HomeController {
             model.addAttribute("home", homeDao.findAll());
             model.addAttribute("title", "Home");
 
+
             return "Home/index";
 
         }
