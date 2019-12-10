@@ -2,15 +2,116 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title th:text="${title}">Title</title>
+    <title th:text="${title}">Ale&Ele Bake</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
-<link th:href="@{/images/large.png}" rel="stylesheet" />
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
 
-<body>
-<h1 th:text="${title}"></h1>
+<body class="w3-pale-red">
 
-<nav th:replace="fragment :: navigation"></nav>
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+    <a href="Home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+    <a href="About" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="Recipes" onclick="w3_close()" class="w3-bar-item w3-button">RECIPES</a>
+    <a href="SERVICES" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+    <a href="https://aleandelebake.com/" onclick="w3_close()" class="w3-bar-item w3-button">SHOP</a>
+    <a href="https://www.facebook.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+    <a href="https://www.instagram.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.pinterest.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-pinterest"></i></a>
+
+</div>
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-large w3-pale-red">
+        <h1 class="w3-xxxlarge w3-text-white"><b>Ale & Ele Bake</b></h1>
+        <img src="/images/logomedium.png"  width="20%" alt="Logo">
+
+
+        <!-- Page content -->
+        <div class="w3-content" style="max-width:1100px">
+
+            <!-- About Section -->
+            <div class="w3-row w3-padding-64" id="about">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="/images/Bites/PaintedMAcs.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+                </div>
+
+                <div class="w3-col m6 w3-padding-large">
+                    <h1 class="w3-center">OUR SERVICES</h1><br>
+                    <h5 class="w3-center">PRE ORDER & PURCHASE BAKED GOODS</h5>
+                    <p class="w3-text-grey">You can contract our catering services or order individual
+                        baked goods through our site <a href="https://aleandelebake.com/">www.aleandelebake.com</a> </p><br>
+
+                    <h5 class="w3-center">BE THE STAR BAKER!</h5>
+                    <p class="w3-text-grey w3-hide-medium">At Ale&Ele Bake we offer you the opportunity of being the star baker at your parties and events. We can visit your home
+                        and provide you with individual or group training to master the following: </p>
+
+
+                    <ul class="w3-text-grey w3-hide-medium">
+                        <li>Basic Cake baking, leveling and decorating</li>
+                        <li>Fondant techniques</li>
+                        <li>Meringue and Buttercreams</li>
+                        <li>Basic cookie decorating skills (Royal Icing)</li>
+                        <li>Basic French Macarons</li>
+                        <li>Tarts and Pie Doughs</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+        <div class="w3-container w3-padding-64" id="contact">
+                <div class="w3-col l6 w3-padding-large">
+            <p class="w3-text-grey w3-hide-medium">For information on the workshop of your interest,
+                please fill out the form below.</p>
+            <p class="w3-text-grey w3-hide-medium">To place a catering order, please visit our <a href="https://aleandelebake.com/">website</a>. <br>
+                For baking questions and comments, please use the form below:</p><br><br>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-padding-16" type="email" placeholder="johndoe@email.com" required name="Email"></p>
+                <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2019-12-15T20:00"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Comment" required name="Message"></p>
+
+                <p><select class="w3-select w3-padding-16" required name="Workshops">
+                    <option value="">Choose the workshop of your interest</option>
+                    <option value="1">Basic Cake baking, leveling and decorating</option>
+                    <option value="2">Fondant techniques</option>
+                    <option value="3">Meringue and Buttercreams</option>
+                    <option value="4">Basic cookie decorating skills (Royal Icing)</option>
+                    <option value="5">Basic French Macarons</option>
+                    <option value="6">Tarts and Pie Doughs</option>
+                </select></p>
+                <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND</button></p>
+            </form>
+        </div>
+
+            <div class="w3-col l6 w3-padding-large">
+                <img src="/images/Bites/iceCreamCupcakes.jpg" class="w3-round w3-image w3-opacity-min" alt="Ice Cream Cupcakes" style="width:100%">
+            </div>
+        </div>
+
 
 </body>
+
+<footer class="w3-container w3-red-pale w3-center" style="padding:32px">
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">www.aleandelebake.com</a></p>
+    <p>Copyright © 2018 ale&ele bake - All Rights Reserved.</p>
+</footer>
 </html>
