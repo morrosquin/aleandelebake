@@ -2,23 +2,85 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title th:text="${title}">Title</title>
+    <title th:text="${title}">Ale&Ele Bake</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
-<body>
 
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
 
-<nav th:replace="fragment :: navigation"></nav>
+<body class="white">
 
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+    <a href="Home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+    <a href="About" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="Recipes" onclick="w3_close()" class="w3-bar-item w3-button">RECIPES</a>
+    <a href="Services" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+    <a href="https://aleandelebake.com/" onclick="w3_close()" class="w3-bar-item w3-button">SHOP</a>
+    <a href="https://www.facebook.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+    <a href="https://www.instagram.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.pinterest.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-pinterest"></i></a>
 
-<div class="w3-container w3-padding-32 w3-center">
-    <h3>About Me</h3><br>
-    <img src="/images/AleyEle.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-    <div class="w3-padding-32">
-        <h4><b>I am Who I Am!</b></h4>
-        <h6><i>With Passion For Real, Good Desserts made from Scratch</i></h6>
-        <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    </div>
 </div>
 
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-large w3-pale-red">
+        <h1 class="w3-xxxlarge w3-text-white"><b>Ale & Ele Bake</b></h1>
+        <img src="/images/logomedium.png"  width="20%" alt="Logo">
+
+
+        <!-- Page content -->
+        <div class="w3-content" style="max-width:1100px">
+
+            <!-- Contact Section -->
+            <div class="w3-row w3-padding-64" id="aboutus">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="/images/EleyMami.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+                </div>
+
+                <div class="w3-col m6 w3-padding-large">
+                    <h1 class="w3-center">ABOUT US</h1><br>
+                    <p class="w3-text-grey">
+                        I'm a self-taught baker, born and raised in Mexico, where I had the great fortune of spending my youth in my parents' farm. <br>
+                        The sweet smell of the freshly baked apple bread that my mom made every morning at the farm is my most precious childhood memory. <br>
+                        When I became a mother, I wanted to recreate for Eleazar, my three-year old son, that love-at-first-bite experience me and my siblings had when tasting my mother's baked goods. <br>
+                        I just had a tiny problem: I didn't know how to bake.<br><br>
+                        My kitchen became the testing lab for many video, blog and print recipes. Most of my relatives and close friends were the guinea pigs for these awful oven experiments.<br>
+                        My first pastries were just awful, but little by little, I found a way to master the skill and combine ingredients and even integrate some Mexican and Latin American flavors in my creations.<br>
+                        They were so tasty, even my picky son wanted to help me in the kitchen as a "flavor inspector".<br><br>
+                        That's how Ale&Ele Bake was born.<b></b>
+                        Now, thanks to Carlos, my tech savvy husband, we are the hosts of <a href="https://aleandelebake.com/">www.aleandelebake.com</a> an online pastry catering business where residents of the Tampa, Florida
+                        bay area can order custom cakes, decorated cookies, hand painted French macarons, and all sorts of sweets and pastries for a full dessert table.<br>
+                        We don't have a brick and mortar site, but we are happy to make available to you our baking goods and knowledge through this blog and our<a href="https://www.facebook.com/aleandelebake/">
+                        Facebook</a>, <a href="https://www.instagram.com/aleandelebake/">Instagram</a>, <a href="https://www.pinterest.com/aleandelebake/">Pinterest</a> accounts.<br><br>
+                        We post new products and recipes every week!</p>
+
+                </div>
+
+
 </body>
+
+<footer class="w3-container w3-white w3-center" style="padding:32px">
+
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">www.aleandelebake.com</a></p>
+    <p>Copyright © 2018 ale&ele bake - All Rights Reserved.</p>
+    <p><img src="/images/logomedium.png"  width="15%" alt="Logo"></p>
+</footer>
 </html>
+
+
+
+
