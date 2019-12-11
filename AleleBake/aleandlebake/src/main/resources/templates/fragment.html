@@ -2,29 +2,42 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <title th:text="${title}">Ale&Ele Bake</title>
 
-    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-    <link th:href="@{/css/styles.css}" rel="stylesheet" />
     <link th:href="@{/images/large.png}" rel="stylesheet" />
-    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 
 
-    <nav th:fragment="navigation">
-        <a href="/Home">Home</a> |
-        <a href="/About">About</a> |
-        <a href="/Recipes">Recipes & Techniques</a> |
-        <a href="/Contact">Contact Us</a>
-        <a href="/Services">Services</a>
-    </nav>
+
     ​
     </div>
 </body>
 
 
-<footer th:fragment="footer">Copyright © 2018 Ale&Ele Bake - All Rights Reserved.</footer>
+
+
+<footer th:fragment="footer" class="w3-container w3-pale-red w3-center" style="padding:32px">
+
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">www.aleandelebake.com</a></p>
+    <p>Copyright © 2018 ale&ele bake - All Rights Reserved.</p>
+    <p><img src="/images/logomedium.png"  width="15%" alt="Logo"></p>
+
+</footer>
 
 </html>
