@@ -24,5 +24,9 @@ public class HomeController {
 
         }
 
+        public void prueba (String email){
+            System.out.println(email);
+        }
+
     }
 

@@ -22,22 +22,21 @@ body {font-family: "Open Sans"}
 
 <body class="w3-light-grey">
 
-<!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-hide-small">
 
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="About" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
     <a href="Services" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
     <a href="Contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-    <a href="Categories" onclick="w3_close()" class="w3-bar-item w3-button">RECIPES</a>
+    <a href="Recipes" onclick="w3_close()" class="w3-bar-item w3-button">RECIPES</a>
     <a href="https://aleandelebake.com/" onclick="w3_close()" class="w3-bar-item w3-button">SHOP</a>
 
     <a href="https://www.facebook.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
     <a href="https://www.instagram.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
     <a href="https://www.pinterest.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-pinterest"></i></a>
-
-
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
 </div>
-
 
 
 <!-- w3-content defines a container for fixed size centered content,
@@ -62,6 +61,8 @@ and is wrapped around the whole page content, except for the footer in this exam
             <h1 class="w3-text-white">Welcome to Ale & Ele Bake</h1>
             <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Learn, Experiment, Enjoy!</b></h1>
             <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity-max w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
+
+
         </div>
 
     </header>
@@ -122,27 +123,18 @@ and is wrapped around the whole page content, except for the footer in this exam
                     <p> I'm a self-taught baker, born and raised in Mexico,
                         where I had the great fortune of spending my youth in my parents' farm.
                         The sweet smell of the freshly baked apple bread
-                        that my mom made every morning at the farm is my most precious childhood memory.
+                        that my mom made every morning at the farm is my most precious childhood memory.<br><br>
                         When I became a mother, I wanted to recreate for Eleazar, my three-year old son,
                         that love-at-first-bite experience me and my siblings had when
-                        tasting my mother's baked goods. I just had a tiny problem: I didn't know how to bake.
+                        tasting my mother's baked goods. I just had a tiny problem: I didn't know how to bake.<br><br>
                         My kitchen became the testing lab for many video, blog and print recipes.
                         Most of my relatives and close friends were the guinea pigs for these awful
-                        oven experiments.  My first pastries were just awful, but little by little,
+                        oven experiments. <br><br>
+                        My first pastries were terrible, but little by little,
                         I found a way to master the skill and combine
                         ingredients and even integrate some Mexican and Latin American flavors in my creations.
-                        They were so tasty, even my picky son wanted to help me in the kitchen as a "flavor inspector".
+                        They were so tasty, even my picky son wanted to help me in the kitchen as a "flavor inspector".<br><br>
                         That's how Ale&Ele Bake was born. <br><br>
-
-                        Now, thanks to Carlos, my tech savvy husband, we are the hosts of www.aleandelebake.com an
-                        online pastry catering business where residents of the Tampa, Florida bay area
-                        can order custom cakes, decorated cookies, hand painted French macarons,
-                        and all sorts of sweets and pastries for a full dessert table.
-                        We don't have a brick and mortar site (yet!),
-                        but we are happy to make available to you our baking goods and knowledge
-                        through our site www.aleandelebake.com and our
-                        Facebook, Instagram, Pinterest accounts.
-                        We post new products and recipes every week!
 
                         <a href="About" onclick="w3_close()"  class="w3-button w3-text-gray">More...</a>
                     </p>
@@ -202,6 +194,7 @@ and is wrapped around the whole page content, except for the footer in this exam
             <hr>
 
             <!-- Subscribe -->
+            <form method="post">
             <div class="w3-white w3-margin">
                 <div class="w3-container w3-padding w3-black">
                     <h4>Subscribe</h4>
@@ -209,9 +202,11 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <div class="w3-container w3-red-pale">
                     <p>Enter your e-mail below and get notified on the latest blog posts.</p>
                     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-                    <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-pale-red">Subscribe</button></p>
+                    <a href="User" onclick="w3_close()" class="w3-button w3-block w3-pale-red">Subscribe</a>
+
                 </div>
             </div>
+            </form>
 
             <!-- END About/Intro Menu -->
         </div>
@@ -222,18 +217,25 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- END w3-content -->
 </div>
 
-<!-- Subscribe Modal -->
+<!-- Subscribe Modal
+
+
+
 <div id="subscribe" class="w3-modal w3-animate-opacity">
     <div class="w3-modal-content" style="padding:32px">
         <div class="w3-container w3-red-pale">
-            <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+            <i onclick="document.getElementById('subscribe').style.display='none'"
+               class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
             <h2 class="w3-wide">SUBSCRIBE</h2>
             <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-            <button type="button" class="w3-button w3-block w3-padding-large w3-pale-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+            <form method="post">
+            <p><input class="w3-input w3-border" type="email" name="email" placeholder="Enter e-mail"></p>
+            <input type="submit" class="w3-button w3-block w3-padding-large w3-pale-red w3-margin-bottom"
+                   onclick="document.getElementById('subscribe').style.display='none'">Subscribe</input>
+</form>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Footer -->
 <footer class="w3-container w3-pale-red w3-center" style="padding:32px">
 

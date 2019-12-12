@@ -1,6 +1,6 @@
 package org.launchcode.aleandelebake.controllers;
 
-import org.launchcode.aleandelebake.models.data.CategoriesDao;
+import org.launchcode.aleandelebake.models.data.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CatCakesController {
 
         @Autowired
-        private CategoriesDao categoriesDao;
+        private UserDao categoriesDao;
 
         @RequestMapping(value = "")
         public String index(Model model) {
