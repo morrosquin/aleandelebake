@@ -1,28 +1,30 @@
 package org.launchcode.aleandelebake.controllers;
 
-import org.launchcode.aleandelebake.models.data.UserDao;
+import org.launchcode.aleandelebake.models.data.BunuelosDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("Categories/Cakes")
-public class CatCakesController {
+@RequestMapping("Bunuelo")
+public class BunuelosController {
 
         @Autowired
-        private UserDao categoriesDao;
+        private BunuelosDao bunuelosDao;
 
         @RequestMapping(value = "")
         public String index(Model model) {
 
-            model.addAttribute("categories", categoriesDao.findAll());
-            model.addAttribute("title", "Categories");
+            model.addAttribute("bunuelos", bunuelosDao.findAll());
+            model.addAttribute("title", "Bunuelo");
 
 
-            return "Categories/Cakes";
+            return "Recipes/bunuelos";
 
         }
+
+
 
     }
 

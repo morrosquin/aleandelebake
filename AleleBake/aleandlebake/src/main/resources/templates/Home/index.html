@@ -194,19 +194,26 @@ and is wrapped around the whole page content, except for the footer in this exam
             <hr>
 
             <!-- Subscribe -->
-            <form method="post">
-            <div class="w3-white w3-margin">
-                <div class="w3-container w3-padding w3-black">
-                    <h4>Subscribe</h4>
+            <!-- <form method="post">-->
+            <form th:object="${User}" th:action="@{/user}" method="post">
+                <div class="subscribe">
+                    <div class="w3-white w3-margin">
+                        <div class="w3-container w3-padding w3-black">
+                            <h4>Subscribe</h4>
+                        </div>
+                        <div class="w3-container w3-red-pale">
+                            <p>Enter your e-mail below and get notified on the latest blog posts.</p>
+                            <p><input class="w3-input w3-border" type="text"
+                                      placeholder="Enter e-mail" style="width:100%"></p>
+                            <a href="User" onclick="w3_close()" class="w3-button w3-block w3-pale-red">Subscribe</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="w3-container w3-red-pale">
-                    <p>Enter your e-mail below and get notified on the latest blog posts.</p>
-                    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-                    <a href="User" onclick="w3_close()" class="w3-button w3-block w3-pale-red">Subscribe</a>
-
-                </div>
-            </div>
             </form>
+
+
+
+
 
             <!-- END About/Intro Menu -->
         </div>
