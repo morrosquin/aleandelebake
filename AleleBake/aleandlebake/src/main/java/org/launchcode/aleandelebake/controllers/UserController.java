@@ -22,7 +22,7 @@ public class UserController {
     public String subscribe(Model model) {
         model.addAttribute(new User());
         model.addAttribute("title", "subscribe");
-        return "subscribe";
+        return "Home/subscribe";
 
 
     }
@@ -35,7 +35,7 @@ public class UserController {
         userDao.save (newUser);
 //            User myvaliduser = new User(user.getUsername(), user.getPassword());
 //            UserDao.save(myvaliduser);
-        return "redirect:/subscribe";
+        return "redirect: Home/subscribe";
 
     }
 

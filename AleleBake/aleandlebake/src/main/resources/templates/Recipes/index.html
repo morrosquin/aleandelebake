@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <title>Ale&Ele Bake</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
+<head th:replace="fragment :: head"></head>
 
 
 <div class="w3-bar w3-black w3-hide-small">
@@ -33,13 +22,8 @@
 <div class="w3-content" style="max-width:1600px">
 
     <!-- Header -->
-    <header class="w3-container w3-center w3-padding w3-pale-red">
-        <!-- <h1 class="w3-xxxlarge w3-text-white"><b>Ale & Ele Bake</b></h1>-->
-        <img src="/images/logomedium.png"  width="20%" alt="Logo">
+    <header th:replace="fragment :: header"></header>
 
-
-
-    </header>
 
 
 <!-- Top menu -->
@@ -64,7 +48,7 @@
         </div>
         <div class="w3-half">
             <img src="/images/Cookies/Bunuelos2.jpg" alt="Mexican Buñuelos" style="width:100%">
-           <a href="Bunuelo"> <h3>Crispy Mexican Buñuelos</h3></a>
+            <a href="Bunuelo"><h3>Buñuelos de Viento</h3></a>
             <p>Nothing like a crispy rosette covered in sugar and cinnamon to celebrate the holidays <br>
                  warming up to the holidays. </p>
         </div>
@@ -101,12 +85,7 @@
 
 
 </body>
-<footer class="w3-container w3-pale-red w3-center" style="padding:32px">
-
-    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <p>Powered by <a href="https://www.aleandelebake.com" target="_blank">www.aleandelebake.com</a></p>
-    <p>Copyright © 2018 ale&ele bake - All Rights Reserved.</p>
-    <p><img src="/images/logomedium.png"  width="15%" alt="Logo"></p>
+<footer th:replace="fragment :: footer">
 </footer>
 
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="fragment :: head"></head>
+
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+
+<body class="w3-light-grey">
+
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="About" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="Services" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+    <a href="Contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="Recipes" onclick="w3_close()" class="w3-bar-item w3-button">RECIPES</a>
+    <a href="https://aleandelebake.com/" onclick="w3_close()" class="w3-bar-item w3-button">SHOP</a>
+
+    <a href="https://www.facebook.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+    <a href="https://www.instagram.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.pinterest.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-pinterest"></i></a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+</div>
+
+
+<div class="w3-content" style="max-width:1600px">
+    <header th:replace="fragment :: header"></header>
+
+
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1100px">
+
+        <!-- Contact Section -->
+        <div class="w3-row w3-padding-64" id="contactus">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="/images/Bites/ChickMeringues.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1 class="w3-center">THANK YOU FOR YOUR MESSAGE</h1><br>
+
+                <p class="w3-text-grey w3-hide-medium">We try to respond your questions within two business days.
+                    In the meantime, bake away! </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+</body>
+<footer th:replace="fragment :: footer">
+</footer>
+</html>

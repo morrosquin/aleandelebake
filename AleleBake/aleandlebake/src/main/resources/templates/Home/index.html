@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
+<!--<head>
     <meta charset="UTF-8"/>
     <title th:text="${title}">Ale&Ele Bake</title>
 
@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-</head>
+</head>-->
+
+<head th:replace="fragment :: head"></head>
 
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
@@ -39,18 +41,16 @@ body {font-family: "Open Sans"}
 </div>
 
 
+
 <!-- w3-content defines a container for fixed size centered content,
 and is wrapped around the whole page content, except for the footer in this example -->
 <div class="w3-content" style="max-width:1600px">
+    <header th:replace="fragment :: header"></header>
 
-    <!-- Header -->
+    <!-- Header
     <header class="w3-container w3-center w3-padding w3-white">
-       <!-- <h1 class="w3-xxxlarge w3-text-white"><b>Ale & Ele Bake</b></h1>-->
         <img src="/images/logomedium.png"  width="20%" alt="Logo">
-
-
-
-    </header>
+    </header>-->
 
 
     <!-- Image header -->
@@ -78,13 +78,13 @@ and is wrapped around the whole page content, except for the footer in this exam
             <!-- Blog entry -->
             <div class="w3-container w3-white w3-margin w3-padding-large">
                 <div class="w3-center">
-                    <h3>TITLE HEADING</h3>
-                    <h5>Title description, <span class="w3-opacity">May 2, 2016</span></h5>
+                    <h3>Gingerbread House</h3>
+                    <h5>Bake and decor your own gingerbread house! <span class="w3-opacity">December 6, 2019</span></h5>
                 </div>
 
                 <div class="w3-justify">
                     <img src="/images/Cookies/GingerHouse.jpg" alt="Ginger House" style="width:100%"  class="w3-padding-16">
-                    <p><strong>More Hats!</strong> I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
+                    <p><strong>Gingerbread Houses!</strong> I am crazy about them these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
                         magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 
@@ -95,13 +95,13 @@ and is wrapped around the whole page content, except for the footer in this exam
             <!-- Blog entry -->
             <div class="w3-container w3-white w3-margin w3-padding-large">
                 <div class="w3-center">
-                    <h3>TITLE HEADING</h3>
-                    <h5>Title description, <span class="w3-opacity">April 23, 2016</span></h5>
+                    <h3>NOT YOUR MOM'S APPLE CAKE</h3>
+                    <h5>Ricotta filled sponge apple cake <span class="w3-opacity">December 2, 2019</span></h5>
                 </div>
 
                 <div class="w3-justify">
-                    <img src="/images/Cookies/Bunuelos.jpg" alt="Buñuelos" style="width:100%" class="w3-padding-16">
-                    <p><strong>Hats!</strong> The trend this summer is hats for men!</p>
+                    <img src="/images/Cakes/AppleCake.jpg" alt="Apple Cake" style="width:100%" class="w3-padding-16">
+                    <p><strong>My mom's famous apple cake!</strong> Celebrate the holidays with this apple delight!</p>
                     <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
                         mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
 
@@ -117,14 +117,15 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-col l4">
             <!-- About Card -->
             <div class="w3-white w3-margin">
-                <img src="/images/AleyEle.jpg" alt="Jane" style="width:100%" class="w3-normal">
-                <div class="w3-container w3-red-pale">
-                    <h4>About Us</h4>
-                    <p> I'm a self-taught baker, born and raised in Mexico,
+                <img src="/images/AleyEle.jpg" alt="Ale & Ele" style="width:100%" class="w3-normal">
+
+                <div class="w3-container">
+                    <h4>ABOUT US</h4>
+                    <p class="w3-text-grey"> We are mother and son. I'm Ale, a self-taught baker, born and raised in Mexico,
                         where I had the great fortune of spending my youth in my parents' farm.
                         The sweet smell of the freshly baked apple bread
                         that my mom made every morning at the farm is my most precious childhood memory.<br><br>
-                        When I became a mother, I wanted to recreate for Eleazar, my three-year old son,
+                        When I became a mother, I wanted to recreate for Ele (pictured above), my three-year old son,
                         that love-at-first-bite experience me and my siblings had when
                         tasting my mother's baked goods. I just had a tiny problem: I didn't know how to bake.<br><br>
                         My kitchen became the testing lab for many video, blog and print recipes.
@@ -136,7 +137,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                         They were so tasty, even my picky son wanted to help me in the kitchen as a "flavor inspector".<br><br>
                         That's how Ale&Ele Bake was born. <br><br>
 
-                        <a href="About" onclick="w3_close()"  class="w3-button w3-text-gray">More...</a>
+                        <a href="About" onclick="w3_close()"  class="w3-button w3-pale-red w3-text-gray">More...</a>
                     </p>
 
                 </div>
@@ -205,16 +206,29 @@ and is wrapped around the whole page content, except for the footer in this exam
                             <p>Enter your e-mail below and get notified on the latest blog posts.</p>
                             <p><input class="w3-input w3-border" type="text"
                                       placeholder="Enter e-mail" style="width:100%"></p>
-                            <a href="User" onclick="w3_close()" class="w3-button w3-block w3-pale-red">Subscribe</a>
+                            <p><a href="User" onclick="w3_close()" class="w3-button w3-block w3-pale-red">Subscribe</a></p>
                         </div>
                     </div>
                 </div>
             </form>
 
+            <hr>
 
-
-
-
+            <!-- Tags -->
+            <div class="w3-white w3-margin">
+                <div class="w3-container w3-padding w3-black">
+                    <h4>Tags</h4>
+                </div>
+                <div class="w3-container w3-white">
+                    <p>
+                        <span class="w3-tag w3-black w3-margin-bottom">Baking</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Cakes</span>
+                        <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Buttercream</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Cookies</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Sweets</span>
+                        <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Flour</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Bread</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Mexican</span>
+                        <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Macarons</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Meringues</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Bites</span>
+                        <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Tarts</span> <span class="w3-tag w3-pale-red w3-small w3-margin-bottom">Pie</span>
+                    </p>
+                </div>
+            </div>
             <!-- END About/Intro Menu -->
         </div>
 
@@ -243,17 +257,21 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
     </div>
 </div> -->
-<!-- Footer -->
+<!-- Footer
 <footer class="w3-container w3-pale-red w3-center" style="padding:32px">
 
     <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">www.aleandelebake.com</a></p>
+    <p>Powered by <a href="https://www.aleandelebake.com" target="_blank">www.aleandelebake.com</a></p>
     <p>Copyright © 2018 ale&ele bake - All Rights Reserved.</p>
     <p><img src="/images/logomedium.png"  width="15%" alt="Logo"></p>
-</footer>
+</footer>-->
+
+
 
 
 
 
 </body>
+<footer th:replace="fragment :: footer">
+</footer>
 </html>
