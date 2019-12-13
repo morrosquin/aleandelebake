@@ -31,7 +31,7 @@ public class UserController {
 
         User newUser=new User(email);
         userDao.save (newUser);
-       return "redirect: Home/subscribe";
+       return "Home/subscribe";
 
     }
 
