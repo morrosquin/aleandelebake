@@ -24,18 +24,14 @@ public class UserController {
         model.addAttribute("title", "subscribe");
         return "Home/subscribe";
 
-
     }
 
     @RequestMapping(value = "/subscribe", method = RequestMethod.POST)
     public String add(Model model, @RequestParam String email) {
 
-      User newUser=new User(email);
-
+        User newUser=new User(email);
         userDao.save (newUser);
-//            User myvaliduser = new User(user.getUsername(), user.getPassword());
-//            UserDao.save(myvaliduser);
-        return "redirect: Home/subscribe";
+       return "redirect: Home/subscribe";
 
     }
 
