@@ -93,7 +93,7 @@
                 <form method="post" th:object="${comment}">
                     <div class="form-group">
 
-                        <label class="w3-text-gray" th:for="name"><b>Name</b></label></p>
+                      <!--  <label class="w3-text-gray" th:for="name"><b>Name</b></label></p>
                         <input class="form-control" th:field="*{name}" />
                         <span th:errors="*{name}" class="error"></span>
                     </div>
@@ -102,12 +102,16 @@
                         <label class="w3-text-gray" th:for="message"><b>Comment<b></label>
                         <input class="form-control" th:field="*{message}" />
                         <span th:errors="*{message}" class="error"></span>
+                    </div> -->
+
+
+                        <p><input class="w3-input w3-border" name="name" type="text"
+                                  placeholder="Enter your name" style="width:100%"></p>
+                        <p><input class="w3-input w3-border" name="message" type="text"
+                                  placeholder="Enter your comment" style="width:100%"><b></b></p>
+                        <p><button class="w3-button w3-block w3-pale-red" type="submit" value="Add Comment">Add Comment</button></p>
                     </div>
-
-                    
-
-
-                    <input type="submit" value="Add Comment" />
+                   <!-- <input type="submit" value="Add Comment" />-->
                 </form>
             </div>
         </div>
