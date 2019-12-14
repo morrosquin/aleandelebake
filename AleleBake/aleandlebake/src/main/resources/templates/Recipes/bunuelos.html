@@ -85,18 +85,30 @@
                 <img src="/images/Cookies/Bunuelos2.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
             </div>
 
-            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-heart"></i> Like</b></button></p>
-            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>COMMENTS </b> <span class="w3-tag w3-white">1</span></button></p>
-            <p class="w3-clear"></p>
-            <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-                <hr>
-                <div class="w3-col l2 m3">
-                    <img src="/images/Breads/MangoPastries.jpg" style="width:90px;">
-                </div>
-                <div class="w3-col l10 m9">
-                    <h4>George <span class="w3-opacity w3-medium">December 13, 2019, 6:32 PM</span></h4>
-                    <p>Great blog post! Following</p>
-                </div>
+           <!-- <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-heart"></i> Like</b></button></p>
+           <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('Comment')" id="commentbtn"><b>COMMENTS </b> <span class="w3-tag w3-white">1</span></button></p>
+            <p class="w3-clear"></p>-->
+            <div class="w3-row w3-margin-bottom" id="demo1" style="max-width:1200px">
+                <h1>Comment</h1>
+                <form method="post" th:object="${comment}">
+                    <div class="form-group">
+
+                        <label class="w3-text-gray" th:for="name"><b>Name</b></label></p>
+                        <input class="form-control" th:field="*{name}" />
+                        <span th:errors="*{name}" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="w3-text-gray" th:for="message"><b>Comment<b></label>
+                        <input class="form-control" th:field="*{message}" />
+                        <span th:errors="*{message}" class="error"></span>
+                    </div>
+
+                    
+
+
+                    <input type="submit" value="Add Comment" />
+                </form>
             </div>
         </div>
     </div>
