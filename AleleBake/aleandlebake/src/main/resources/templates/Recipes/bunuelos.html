@@ -89,7 +89,7 @@
            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('Comment')" id="commentbtn"><b>COMMENTS </b> <span class="w3-tag w3-white">1</span></button></p>
             <p class="w3-clear"></p>-->
             <div class="w3-row w3-margin-bottom" id="demo1" style="max-width:1200px">
-                <h1>Comment</h1>
+                <h4>COMMENT</h4>
                 <form method="post" th:object="${comment}">
                     <div class="form-group">
 
@@ -113,6 +113,21 @@
                     </div>
                    <!-- <input type="submit" value="Add Comment" />-->
                 </form>
+
+                <table class="table">
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Comment</th>
+                    </tr>
+
+                    <tr th:each="comment : ${comments}">
+                        <td th:text="${comment.name}"></td>
+                        <td th:text="${comment.message}"></td>
+
+                    </tr>
+
+                </table>
             </div>
         </div>
     </div>

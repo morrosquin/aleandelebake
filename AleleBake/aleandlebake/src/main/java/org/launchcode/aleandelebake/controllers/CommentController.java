@@ -17,21 +17,34 @@ public class CommentController {
     @Autowired
     private CommentDao commentDao;
 
+    @RequestMapping(value = "")
+    public String index(Model model) {
+
+        model.addAttribute("comments", commentDao.findAll());
+        model.addAttribute("title", "My Comments");
+
+        return "Recipes/bunuelos";
+    }
+
+
     @RequestMapping(value ="Bunuelo", method = RequestMethod.GET)
-    public String displayCommentForm(Model model) {
+    public String displayAddCommentForm(Model model) {
         model.addAttribute("title", "Add Comment");
         model.addAttribute(new Comment());
         model.addAttribute("name", "Add Name");
+
+
+
         return "Recipes/bunuelos";
     }
 
     @RequestMapping(value = "Bunuelo", method = RequestMethod.POST)
-    public String processCommentForm(@ModelAttribute  @Valid Comment newComment,
+    public String processAddCommentForm(@ModelAttribute  @Valid Comment newComment,
                                      Errors errors, Model model) {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Comment");
-            return "Recipes/bunuelos";
+            return "/bunuelos";
         }
 
         commentDao.save(newComment);

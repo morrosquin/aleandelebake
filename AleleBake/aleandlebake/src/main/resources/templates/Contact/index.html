@@ -45,22 +45,48 @@ and is wrapped around the whole page content, except for the footer in this exam
                     <p class="w3-text-grey">You can contract our catering services or order individual
                         baked goods through our site <a href="https://aleandelebake.com/">www.aleandelebake.com</a> </p><br>
                     <p class="w3-text-grey w3-hide-medium">For baking questions and comments, please use the form below:</p>
-                    <form action="/index" target="_blank">
-                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-                        <p><input class="w3-input w3-padding-16" type="email" placeholder="johndoe@email.com" required name="Email"></p>
-                        <p><input class="w3-input w3-padding-16" type="date" placeholder="Date and time" required name="date"></p>
-                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Comment" required name="Message"></p>
-                        <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button><br>
+
+                    <form method="post" th:object="${msg}">
+                        <div class="form-group">
+                    <form method="post" th:object="${msg}">
+                        <div class="form-group">
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" name="*{name"></p>
+                        <p><input class="w3-input w3-padding-16" type="email" placeholder="youremail@email.com" name="email"></p>
+                        <p><input class="w3-input w3-padding-16" type="date" placeholder="Date and time" name="date"></p>
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Comment" name="msg"></p>
+                        <p><button class="w3-button w3-white w3-section" value="Add Msg" type="submit">SEND MESSAGE</button><br>
+                        </div>
+
                     </form>
 
+                  <!--  <form method="post" th:object="${comment}">
+                        <div class="form-group">
+
+                            <label class="w3-text-gray" th:for="name"><b>Name</b></label></p>
+                            <input class="w3-container" th:field="*{name}" />
+                            <span th:errors="*{name}" class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="w3-text-gray" th:for="email"><b>Email</b></label>
+                            <input class="form-control" th:field="*{email}" />
+                            <span th:errors="*{email}" class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="w3-text-gray" th:for="date"><b>Date</b></label>
+                            <input class="form-control" th:field="*{date}" />
+                            <span th:errors="*{date}" class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="w3-text-gray" th:for="msg"><b>Message</b></label>
+                            <input class="form-control" th:field="*{msg}" />
+                            <span th:errors="*{msg}" class="error"></span>
+                        </div>
+                    </form>-->
 
                 </div>
-
-
-
-
-
-
 
 </body>
 
