@@ -23,16 +23,16 @@ public class MsgController {
     public String displayAddMsgForm(Model model) {
         model.addAttribute(new Msg());
         model.addAttribute("title", "Add Message");
-     //   model.addAttribute("name", "Add Name");
-     //   model.addAttribute("email", "Add Email");
-     //   model.addAttribute("date", "Add Date");
+        model.addAttribute("name", "Add Name");
+        model.addAttribute("email", "Add Email");
+        model.addAttribute("date", "Add Date");
 
         return "/index";
     }
 
     @RequestMapping(value = "/msg", method = RequestMethod.POST)
     public String processAddMsgForm(@ModelAttribute @Valid Msg newMsg,
-                                        Errors errors, Model model) {
+                                    Errors errors, Model model) {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Message");
@@ -43,3 +43,4 @@ public class MsgController {
         //redirect
     }
 }
+

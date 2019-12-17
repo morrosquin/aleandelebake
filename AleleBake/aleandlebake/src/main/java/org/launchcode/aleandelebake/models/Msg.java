@@ -54,7 +54,7 @@ public class Msg {
         return msg;
     }
 
-    public void setMsg(String message) { this.msg = msg; }
+    public void setMsg(String msg) { this.msg = msg; }
 
     public String getEmail() { return email; }
 

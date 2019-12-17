@@ -48,9 +48,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                     <form method="post" th:object="${msg}">
                         <div class="form-group">
-                    <form method="post" th:object="${msg}">
-                        <div class="form-group">
-                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" name="*{name"></p>
+
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" name="name"></p>
                         <p><input class="w3-input w3-padding-16" type="email" placeholder="youremail@email.com" name="email"></p>
                         <p><input class="w3-input w3-padding-16" type="date" placeholder="Date and time" name="date"></p>
                         <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Comment" name="msg"></p>
@@ -59,34 +58,35 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                     </form>
 
-                  <!--  <form method="post" th:object="${comment}">
-                        <div class="form-group">
+<!--                   <form method="post" th:object="${msg}">-->
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
 
-                            <label class="w3-text-gray" th:for="name"><b>Name</b></label></p>
-                            <input class="w3-container" th:field="*{name}" />
-                            <span th:errors="*{name}" class="error"></span>
-                        </div>
+<!--&lt;!&ndash;                            <label class="w3-text-gray" th:for="*{name}"><b>Name</b></label></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <input class="form-control" type="text" th:field="*{name}" />&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                            <span th:errors="*{name}" class="error"></span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
 
-                        <div class="form-group">
-                            <label class="w3-text-gray" th:for="email"><b>Email</b></label>
-                            <input class="form-control" th:field="*{email}" />
-                            <span th:errors="*{email}" class="error"></span>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label class="w3-text-gray" th:for="*{email}"><b>Email</b></label>-->
+<!--                            <input class="form-control" th:field="*{email}" />-->
+<!--&lt;!&ndash;                            <span th:errors="*{email}" class="error"></span>&ndash;&gt;-->
+<!--                        </div>-->
 
-                        <div class="form-group">
-                            <label class="w3-text-gray" th:for="date"><b>Date</b></label>
-                            <input class="form-control" th:field="*{date}" />
-                            <span th:errors="*{date}" class="error"></span>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label class="w3-text-gray" th:for="*{date}"><b>Date</b></label>-->
+<!--                            <input class="form-control" th:field="*{date}" />-->
+<!--&lt;!&ndash;                            <span th:errors="*{date}" class="error"></span>&ndash;&gt;-->
+<!--                        </div>-->
 
-                        <div class="form-group">
-                            <label class="w3-text-gray" th:for="msg"><b>Message</b></label>
-                            <input class="form-control" th:field="*{msg}" />
-                            <span th:errors="*{msg}" class="error"></span>
-                        </div>
-                    </form>-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="w3-text-gray" th:for="*{msg}"><b>Message</b></label>-->
+<!--                            <input class="form-control" th:field="*{msg}" />-->
+<!--&lt;!&ndash;                            <span th:errors="*{msg}" class="error"></span>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </form>-->
 
                 </div>
+
 
 </body>
 
