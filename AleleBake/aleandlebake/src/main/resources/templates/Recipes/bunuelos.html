@@ -84,26 +84,13 @@
             <div class="w3-col l6 w3-padding">
                 <img src="/images/Cookies/Bunuelos2.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
             </div>
+            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-heart"></i> Like</b></button></p>
 
-           <!-- <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-heart"></i> Like</b></button></p>
-           <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('Comment')" id="commentbtn"><b>COMMENTS </b> <span class="w3-tag w3-white">1</span></button></p>
-            <p class="w3-clear"></p>-->
+
             <div class="w3-row w3-margin-bottom" id="demo1" style="max-width:1200px">
                 <h4>COMMENT</h4>
                 <form method="post" th:object="${comment}">
                     <div class="form-group">
-
-                      <!--  <label class="w3-text-gray" th:for="name"><b>Name</b></label></p>
-                        <input class="form-control" th:field="*{name}" />
-                        <span th:errors="*{name}" class="error"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="w3-text-gray" th:for="message"><b>Comment<b></label>
-                        <input class="form-control" th:field="*{message}" />
-                        <span th:errors="*{message}" class="error"></span>
-                    </div> -->
-
 
                         <p><input class="w3-input w3-border" name="name" type="text"
                                   placeholder="Enter your name" style="width:100%"></p>
@@ -111,17 +98,17 @@
                                   placeholder="Enter your comment" style="width:100%"><b></b></p>
                         <p><button class="w3-button w3-block w3-pale-red" type="submit" value="Add Comment">Add Comment</button></p>
                     </div>
-                   <!-- <input type="submit" value="Add Comment" />-->
+
                 </form>
 
-                <table class="table">
+                <table class="table" th:object="${comment}">
 
                     <tr>
                         <th>Name</th>
                         <th>Comment</th>
                     </tr>
 
-                    <tr th:each="comment : ${comments}">
+                    <tr th:each="comments : ${comment}">
                         <td th:text="${comment.name}"></td>
                         <td th:text="${comment.message}"></td>
 
@@ -133,25 +120,7 @@
     </div>
 </div>
 
-<script>
-// Toggle between hiding and showing blog replies/comments
-document.getElementById("myBtn").click();
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
 
-function likeFunction(x) {
-  x.style.fontWeight = "bold";
-  x.innerHTML = "✓ Liked";
-}
-
-
-</script>
 
 </body>
 
@@ -159,4 +128,12 @@ function likeFunction(x) {
 <footer th:replace="fragment :: footer">
 </footer>
 
+<script>
+
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
 </html>
