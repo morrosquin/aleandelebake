@@ -18,13 +18,14 @@ public class CommentController {
     @Autowired
     private CommentDao commentDao;
 
-    @RequestMapping(value ="Bunuelo", method = RequestMethod.GET)
+    @RequestMapping(value ="Bunuelo", method = RequestMethod.GET) //Esto es el URL
     public String displayCommentForm(Model model) {
         model.addAttribute("title", "Add Comment");
-
         model.addAttribute(new Comment());
         model.addAttribute("name", "Add Name");
-        return "Recipes/bunuelos";
+        model.addAttribute("comments", commentDao.findAll());
+
+        return "Recipes/bunuelos"; //Esto va al html (bajo templates)
     }
 
     @RequestMapping(value = "Bunuelo", method = RequestMethod.POST)

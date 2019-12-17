@@ -108,7 +108,7 @@
                         <th>Comment</th>
                     </tr>
 
-                    <tr th:each="comments : ${comment}">
+                    <tr th:each="comment: ${comments}">
                         <td th:text="${comment.name}"></td>
                         <td th:text="${comment.message}"></td>
 
