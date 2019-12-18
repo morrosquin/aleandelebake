@@ -46,19 +46,19 @@ and is wrapped around the whole page content, except for the footer in this exam
                         baked goods through our site <a href="https://aleandelebake.com/">www.aleandelebake.com</a> </p><br>
                     <p class="w3-text-grey w3-hide-medium">For baking questions and comments, please use the form below:</p>
 
-                    <form method="post" th:object="${msg}">
+                    <form th:object="${msg}" method="post">
                         <div class="form-group">
 
                             <p><input class="w3-input w3-border" name="name" type="text"
                                       placeholder="Enter your name" style="width:100%"></p>
-                            <p><input class="w3-input w3-border" name="email" type="text"
+                            <p><input class="w3-input w3-border" name="email" type="email"
                                       placeholder="Enter your email" style="width:100%"></p>
                             <p><input class="w3-input w3-border" name="date" type="date"
                                       placeholder="Enter date" style="width:100%"></p>
                             <p><input class="w3-input w3-border" name="message" type="text"
                                       placeholder="Enter your comment" style="width:100%"><b></b></p>
                             <p>
-                                <button class="w3-button w3-block w3-pale-red" type="submit" value="Add Msg">Add
+                                <button class="w3-button w3-block w3-pale-blue" type="submit" value="Add Msg">Add
                                     Message
                                 </button>
                             </p>

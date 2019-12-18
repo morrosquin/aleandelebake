@@ -111,6 +111,8 @@
                     Like</b></button>
             </p>
 
+            <hr>
+
 
             <div class="w3-row w3-margin-bottom" id="demo1" style="max-width:1200px">
                 <h4>COMMENT</h4>
@@ -119,6 +121,8 @@
 
                         <p><input class="w3-input w3-border" name="name" type="text"
                                   placeholder="Enter your name" style="width:100%"></p>
+                        <p><input class="w3-input w3-border" name="date" type="date"
+                                  placeholder="Enter date" style="width:100%"></p>
                         <p><input class="w3-input w3-border" name="message" type="text"
                                   placeholder="Enter your comment" style="width:100%"><b></b></p>
                         <p>
@@ -130,23 +134,25 @@
 
                 </form>
 
-                <div class="w3-container" th:object="${comment}">
+                <div class="w3-row w3-margin-bottom" th:object="${comment}">
 
-                    <ul>
+                    <div class="w3-col l10 m9" th:each="comment: ${commentsdb}">
 
-                    <li th:each="comment: ${commentsdb}">
+                        <hr>
                         <!--esto tiene que ser igual al model.addAttribute("commentsdb", commentDao.findAll());-->
                         <p>
-                            <span>name</span>
-                            <span th:text="${comment.name}"></span>
+                            <span class="w3-opacity w3-medium" th:text="${comment.name}"></span>
+                            <span class="w3-opacity-max w3-pale-blue w3-small w3-border-gray"
+                                  th:text="${comment.date}"></span>
                         </p>
+
+
                         <p>
-                            <span>message</span>
                             <span th:text="${comment.message}"></span>
                         </p>
 
-                    </li>
-                    </ul>
+                    </div>
+
 
                 </div>
             </div>

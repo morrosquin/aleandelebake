@@ -23,6 +23,7 @@ public class CommentController {
         model.addAttribute("title", "Add Comment");
         model.addAttribute(new Comment());
         model.addAttribute("name", "Add Name");
+        model.addAttribute("date", "Add Date");
         model.addAttribute("commentsdb", commentDao.findAll());
 
         return "Recipes/bunuelos"; //Esto va al html (bajo templates)

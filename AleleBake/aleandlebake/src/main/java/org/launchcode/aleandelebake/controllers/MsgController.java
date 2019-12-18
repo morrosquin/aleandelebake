@@ -16,25 +16,21 @@ public class MsgController {
     @Autowired
     private MsgDao msgDao;
 
-    @RequestMapping(value = "msg", method = RequestMethod.GET)
+    @RequestMapping(value = "Msg", method = RequestMethod.GET)
     public String displayAddMsgForm(Model model) {
         model.addAttribute(new Msg());
         model.addAttribute("title", "Add Message");
-//        model.addAttribute("name", "Add Name");
-//        model.addAttribute("email", "Add Email");
-//        model.addAttribute("date", "Add Date");
-
-        return "Contact/index";
+        return "Contact/msg";
     }
 
-    @RequestMapping(value = "/msg", method = RequestMethod.POST)
+    @RequestMapping(value = "Msg", method = RequestMethod.POST)
     public String add(Model model, @RequestParam String email, @RequestParam String name,
                       @RequestParam String date, @RequestParam String message) {
 
 ///
         Msg newMsg = new Msg();
         msgDao.save(newMsg);
-        return "Contact/index";
+        return "redirect:msg";
     }
 }
 
