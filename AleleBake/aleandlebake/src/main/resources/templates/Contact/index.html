@@ -46,7 +46,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                         baked goods through our site <a href="https://aleandelebake.com/">www.aleandelebake.com</a> </p><br>
                     <p class="w3-text-grey w3-hide-medium">For baking questions and comments, please use the form below:</p>
 
-                    <form th:object="${msg}" method="post">
+                    <form th:object="${Thankyou}" action="/thankyou" method="post">
                         <div class="form-group">
 
                             <p><input class="w3-input w3-border" name="name" type="text"
@@ -58,7 +58,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                             <p><input class="w3-input w3-border" name="message" type="text"
                                       placeholder="Enter your comment" style="width:100%"><b></b></p>
                             <p>
-                                <button class="w3-button w3-block w3-pale-blue" type="submit" value="Add Msg">Add
+                                <button class="w3-button w3-block w3-pale-blue" type="submit" value="Add Message">Add
                                     Message
                                 </button>
                             </p>
@@ -67,32 +67,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                     </form>
 
 
-                    <!--                                       <form method="post" th:object="${msg}">-->
-                    <!--                                            <div class="form-group">-->
 
-                    <!--                                                <label class="w3-text-gray" th:for="*{name}"><b>Name</b></label></p>-->
-                    <!--                                                <input class="form-control" type="text" th:field="*{name}" />-->
-                    <!--                                                <span th:errors="*{name}" class="error"></span>-->
-                    <!--                                            </div>-->
-
-                    <!--                                            <div class="form-group">-->
-                    <!--                                                <label class="w3-text-gray" th:for="*{email}"><b>Email</b></label>-->
-                    <!--                                                <input class="form-control" th:field="*{email}" />-->
-                    <!--                                                <span th:errors="*{email}" class="error"></span>-->
-                    <!--                                            </div>-->
-
-                    <!--                                            <div class="form-group">-->
-                    <!--                                                <label class="w3-text-gray" th:for="*{date}"><b>Date</b></label>-->
-                    <!--                                                <input class="form-control" th:field="*{date}" />-->
-                    <!--                                                <span th:errors="*{date}" class="error"></span>-->
-                    <!--                                            </div>-->
-
-                    <!--                                            <div class="form-group">-->
-                    <!--                            <label class="w3-text-gray" th:for="*{msg}"><b>Message</b></label>-->
-                    <!--                            <input class="form-control" th:field="*{msg}" />-->
-                    <!--                            <span th:errors="*{msg}" class="error"></span>-->
-                    <!--                        </div>-->
-                    <!--                    </form>-->
 
                 </div>
 
