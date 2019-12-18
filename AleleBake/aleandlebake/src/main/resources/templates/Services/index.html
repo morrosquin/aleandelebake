@@ -19,7 +19,7 @@ body {font-family: "Open Sans"}
     <a href="https://www.facebook.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
     <a href="https://www.instagram.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
     <a href="https://www.pinterest.com/aleandelebake/" class="w3-bar-item w3-button"><i class="fa fa-pinterest"></i></a>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+
 </div>
 
 <!-- w3-content defines a container for fixed size centered content,
@@ -65,29 +65,41 @@ and is wrapped around the whole page content, except for the footer in this exam
 
             <!-- Contact Section -->
         <div class="w3-container w3-padding-64" id="contact">
-                <div class="w3-col l6 w3-padding-large">
-            <p class="w3-text-grey w3-hide-medium">For information on the workshop of your interest,
-                please fill out the form below.</p>
-            <p class="w3-text-grey w3-hide-medium">To place a catering order, please visit our <a href="https://aleandelebake.com/">website</a>. <br>
-                For baking questions and comments, please use the form below:</p><br><br>
-            <form action="/action_page.php" target="_blank">
-                <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-                <p><input class="w3-input w3-padding-16" type="email" placeholder="johndoe@email.com" required name="Email"></p>
-                <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2019-12-15T20:00"></p>
-                <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Comment" required name="Message"></p>
+            <div class="w3-col l6 w3-padding-large">
+                <p class="w3-text-grey w3-hide-medium">For information on the workshop of your interest,
+                    please fill out the form below.</p>
+                <p class="w3-text-grey w3-hide-medium">To place a catering order, please visit our <a
+                        href="https://aleandelebake.com/">website</a>. <br>
+                    For baking questions and comments, please use the form below:</p><br><br>
+                <form th:object="${Ourservices}" action="/ourservices" method="post">
+                    <div class="form-group">
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="name">
+                        </p>
+                        <p><input class="w3-input w3-padding-16" type="email" placeholder="johndoe@email.com" required
+                                  name="email"></p>
+                        <p><input class="w3-input w3-padding-16" type="date" placeholder="Date and time" required
+                                  name="date"></p>
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Comment" required
+                                  name="message"></p>
+                        <p><select class="w3-select w3-padding-16" required name="workshops">
+                            <option value="">Choose the workshop of your interest</option>
+                            <option value="Cake Basics">Cake Basics: baking, leveling and decorating</option>
+                            <option value="Fondant Techniques">Fondant techniques</option>
+                            <option value="Meringues and Buttercreams">Meringue and Buttercreams</option>
+                            <option value="Royal Icing">Basic cookie decorating skills (Royal Icing)</option>
+                            <option value="French Macarons">Basic French Macarons</option>
+                            <option value="Tarts and Pies">Tarts and Pie Doughs</option>
+                        </select></p>
 
-                <p><select class="w3-select w3-padding-16" required name="Workshops">
-                    <option value="">Choose the workshop of your interest</option>
-                    <option value="1">Basic Cake baking, leveling and decorating</option>
-                    <option value="2">Fondant techniques</option>
-                    <option value="3">Meringue and Buttercreams</option>
-                    <option value="4">Basic cookie decorating skills (Royal Icing)</option>
-                    <option value="5">Basic French Macarons</option>
-                    <option value="6">Tarts and Pie Doughs</option>
-                </select></p>
-                <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND</button></p>
-            </form>
-        </div>
+                        <p>
+                            <button class="w3-button w3-section w3-pale-blue" type="submit" value="Add Message">Add
+                                Message
+                            </button>
+                        </p>
+                    </div>
+
+                </form>
+            </div>
 
             <div class="w3-col l6 w3-padding-large">
                 <img src="/images/Bites/iceCreamCupcakes.jpg" class="w3-round w3-image w3-opacity-min" alt="Ice Cream Cupcakes" style="width:100%">
