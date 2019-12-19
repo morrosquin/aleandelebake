@@ -38,34 +38,39 @@
             <div class="w3-center w3-padding-16" >RECIPES</div>
         </div>
 
+        <form th:object="${Recipes}" method="post">
+            <!-- First Photo Grid-->
+            <div class="w3-row-padding w3-padding-16 w3-center" id="food">
 
-    <!-- First Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-        <div class="w3-half">
-            <img src="/images/Cookies/GingerHouse.jpg" alt="Gingerbread House" style="width:100%">
-            <h3>Choco-Gingerbread House</h3>
-            <p>Make your un chocolate cookie house from scratch using royal icing and fondant decor.</p>
-        </div>
-        <div class="w3-half">
-            <img src="/images/Cookies/Bunuelos2.jpg" alt="Mexican Buñuelos" style="width:100%">
-            <a href="Bunuelo"><h3>Buñuelos de Viento</h3></a>
-            <p>Nothing like a crispy rosette covered in sugar and cinnamon to celebrate the holidays <br>
-                 warming up to the holidays. </p>
-        </div>
+                <div class="w3-half">
+                    <img src="/images/Cookies/GingerHouse.jpg" alt="Gingerbread House" style="width:100%">
+                    <h3 name="name" type="text">Choco-Gingerbread House</h3>
+                    <p name="description" type="text">Make your un chocolate cookie house from scratch using royal icing
+                        and fondant decor.</p>
+                </div>
+                <div class="w3-half">
+                    <img src="/images/Cookies/Bunuelos2.jpg" alt="Mexican Buñuelos" style="width:100%">
+                    <a href="Bunuelo"><h3 name="name" type="text">Buñuelos de Viento</h3></a>
+                    <p name="description" type="text">Nothing like a crispy rosette covered in sugar and cinnamon to
+                        celebrate the holidays <br>
+                        warming up to the holidays. </p>
+                </div>
     </div>
-    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-        <div class="w3-half">
-            <img src="/images/Cakes/ChocoMameyCake.jpg" alt="Mango Cake" style="width:100%">
-            <h3>Chocolate-Mamey No Bake Tart</h3>
-            <p>The velvety texture of the mamey fruit and the chocolate cover make of this tart a decadent choice.</p>
+            <div class="w3-row-padding w3-padding-16 w3-center">
+                <div class="w3-half">
+                    <img src="/images/Cakes/ChocoMameyCake.jpg" alt="Mamey Cake" style="width:100%">
+                    <h3 name="name" type="text">Chocolate-Mamey No Bake Tart</h3>
+                    <p name="description" type="text">The velvety texture of the mamey fruit and the chocolate cover
+                        make of this tart a decadent choice.</p>
 
-        </div>
-        <div class="w3-half">
-            <img src="/images/Bites/PaintedMacs.jpg" alt="Pasta and Wine" style="width:100%">
-            <h3>Hand Painted Macarons</h3>
-            <p>Use edible paints and your favorite spirits to decorate these <br>
-                delicious French macarons.</p>
-        </div>
+                </div>
+                <div class="w3-half">
+                    <img src="/images/Bites/PaintedMacs.jpg" alt="Painted Macs" style="width:100%">
+                    <h3 name="name" type="text">Hand Painted Macarons</h3>
+                    <p name="description" type="text">Use edible paints and your favorite spirits to decorate these <br>
+                        delicious French macarons.</p>
+                </div>
+        </form>
     </div>
 
 

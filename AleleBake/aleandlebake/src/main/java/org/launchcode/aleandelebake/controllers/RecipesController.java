@@ -14,6 +14,7 @@ public class RecipesController {
     @RequestMapping(value = "")
     public String index(Model model) {
 
+
         model.addAttribute("recipes", recipesDao.findAll());
         model.addAttribute("title", "Recipes");
 
@@ -21,3 +22,4 @@ public class RecipesController {
 
     }
 }
+
